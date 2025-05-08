@@ -5,7 +5,7 @@ from faster_whisper import WhisperModel
 
 
 # After conversion, set the model path to the converted model's directory
-MODEL_NAME = r"api\models\output"  # Adjust path after conversion
+MODEL_NAME = r"models\output"  # Adjust path after conversion
 
 # Choose the device for processing (CUDA or CPU) this is optional
 device = "cuda" if torch.cuda.is_available() else "cpu"
