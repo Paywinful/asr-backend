@@ -20,7 +20,7 @@ app.add_middleware(
 async def transcribe(file: UploadFile = File(...), model: str = Form(...)):
     # if model == "wav2vec2":
         # return {"transcription": transcribe_with_wav2vec2(file.file)}
-    if model == "whisper":
+    # if model == "whisper":
         return {"transcription": transcribe_with_whisper(file.file)}
-    else:
-        return {"error": "Unsupported model"}
+    # else:
+        # return {"error": "Unsupported model"}
