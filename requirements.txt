@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+transformers
+torchaudio
+whisper
+
+
+# Run this below to start the server
+# uvicorn main:app --reload

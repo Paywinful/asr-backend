@@ -1,0 +1,4 @@
+akan-asr-frontend/
+__pycache__/
+*.pyc
+api/models/checkpoint-16000_30/
