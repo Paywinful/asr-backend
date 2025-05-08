@@ -4,6 +4,7 @@ python-multipart
 transformers
 torchaudio
 whisper
+faster-whisper
 
 
 # Run this below to start the server
