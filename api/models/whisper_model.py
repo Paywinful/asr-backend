@@ -1,16 +1,16 @@
-# import subprocess
+import os
 import torch
 from faster_whisper import WhisperModel
 
+# Construct the model path relative to this file's location
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "output")  # assumes 'output' folder is next to this script
 
-
-# After conversion, set the model path to the converted model's directory
-MODEL_NAME = r"models\output"  # Adjust path after conversion
-
-# Choose the device for processing (CUDA or CPU) this is optional
+# Choose the device (CUDA if available)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-model = WhisperModel(MODEL_NAME, device=device, compute_type="int8")
+# Load the converted Whisper model
+model = WhisperModel(MODEL_PATH, device=device, compute_type="int8")
 
 def transcribe_with_whisper(audio_data):
     """Transcribe audio using Whisper model."""
@@ -21,4 +21,3 @@ def transcribe_with_whisper(audio_data):
         transcription += segment.text + " "
     
     return transcription
-
