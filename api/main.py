@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, Form
 from fastapi.middleware.cors import CORSMiddleware
 # from models.wav2vec2_model import transcribe_with_wav2vec2
-from models.whisper_model import transcribe_with_whisper
+from .models.whisper_model import transcribe_with_whisper
 import tempfile
 import shutil
 
